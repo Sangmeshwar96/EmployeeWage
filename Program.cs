@@ -1,6 +1,17 @@
 ﻿using System;
-using EmployeeWage;
-Console.WriteLine("---Welcome To Employee Wage program---");
-Console.WriteLine("");
-Emp emp = new Emp();
-emp.Wage();
+using System.Xml.Linq;
+using SnakeLadder;
+
+namespace SnakeAndLadder
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to Snake and Ladder Game");
+            Snake snake = new Snake();
+            snake.Ladder();
+
+        }
+    }
+}
