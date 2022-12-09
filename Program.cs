@@ -9,7 +9,7 @@ namespace EmployeeWage
             Console.WriteLine("--Welcome to employee wage computation program--");
             Console.WriteLine(" ");
 
-            Wages comp = new Wages();
+            IEmployeeWageForCompany comp = new Wages();
             comp.AddDetails("TATA", 200, 20, 8);
             comp.AddDetails("Wipro", 300, 25, 9);
             comp.AddDetails("TCS", 200, 25, 9);
