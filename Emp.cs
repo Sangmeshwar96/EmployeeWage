@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using class
+
 namespace EmployeeWage
 {
     public class Emp
     {
-        public void Wage()
+        public int fullTime = 1;
+        public int partTime = 2;
+        public int empHr = 0;
+        public int empWage = 0;
+        public int totalWage = 0;
+        public void Wage(string comp, int wagePerHR, int totalWorkingdays, int totalWorkingHR)
         {
-            int fullTime = 1;
-            int partTime = 2;
-            int empHr = 0;
-            int empWage = 0;
-            int wagePerHR = 20;
-            int totalWorkingdays = 20;
-            int totalWorkingHR = 100;
-            int totalEmpHr = 0;
-            int totalDay = 0;
-            do
+            for (int i = 0; i < totalWorkingdays; i++)
             {
 
                 Random random = new Random();
@@ -27,23 +23,22 @@ namespace EmployeeWage
                 if (attendCheck == fullTime)
                 {
                     empHr = 8;
-                    Console.WriteLine($"Full time employee");
                 }
                 else if (attendCheck == partTime)
                 {
                     empHr = 4;
-                    Console.WriteLine("Part time employee");
                 }
                 else
                 {
                     empHr = 0;
-                    Console.WriteLine("The employee is absent");
                 }
-                totalEmpHr = totalEmpHr + empHr;
                 empWage = empHr * wagePerHR;
+                totalWage = totalWage + empWage;
+            }
                 Console.WriteLine($"Employee wage is {empWage}");
                 totalDay++;
-            } while (totalEmpHr <= totalWorkingHR && totalDay < totalWorkingdays);
+            } 
+            while (totalEmpHr <= totalWorkingHR && totalDay < totalWorkingdays);
             Console.WriteLine($"The total working days per month is {totalWorkingdays} and total working hours is {totalEmpHr}");
             empWage = totalEmpHr * wagePerHR;
             Console.WriteLine($"Employee wage is {empWage}");
