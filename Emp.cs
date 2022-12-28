@@ -47,6 +47,7 @@ namespace EmployeeWage
             Console.WriteLine($"The total working days per month is {totalWorkingdays} and total working hours is {totalEmpHr}");
             empWage = totalEmpHr * wagePerHR;
             Console.WriteLine($"Employee wage is {empWage}");
+            
         }
     }
 }
