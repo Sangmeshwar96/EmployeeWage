@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,8 +41,7 @@ namespace EmployeeWage
             while (totalEmpHr <= totalWorkingHR && totalDay < totalWorkingdays);
             Console.WriteLine($"The total working days per month is {totalWorkingdays} and total working hours is {totalEmpHr}");
             empWage = totalEmpHr * wagePerHR;
-            Console.WriteLine($"Employee wage is {empWage}");
-            
+            Console.WriteLine($"Employee wage is {empWage}");   
         }
     }
 }
